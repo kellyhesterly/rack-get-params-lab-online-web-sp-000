@@ -28,6 +28,7 @@ class Application
    if req.path.match(/items/)
      @@items.each do |item|
        @@items << item
+       resp.write "added #{item}"
       end
     else resp.write "We don't have that item"
     end
