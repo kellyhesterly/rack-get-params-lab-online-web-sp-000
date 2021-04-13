@@ -26,7 +26,7 @@ class Application
        end
      end
 
-   if !@@items.include?("Fogs")
+   if !@@items.include?("Figs")
      @@items.each do |item|
        binding.pry
        @@items << item
