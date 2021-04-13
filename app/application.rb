@@ -27,6 +27,7 @@ class Application
      end
 
      if !@@items.include?(self)
+       binding.pry
        @@items << self
      end
 
