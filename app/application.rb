@@ -20,6 +20,9 @@ class Application
     resp.finish
   end
 
+  def cart
+  end
+
   def handle_search(search_term)
     if @@items.include?(search_term)
       return "#{search_term} is one of our items"
