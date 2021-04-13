@@ -17,21 +17,14 @@ class Application
     else
       resp.write "Path Not Found"
     end
+
+    if @@cart.empty?
+       resp.write "#{search_term} is one of our items"
+     else
+       resp.write "Couldn't find #{search_term}"
+     end
+     
     resp.finish
-  end
-
-  def cart(env)
-    resp = Rack::Response.new
-    req = Rack::Request.new(env)
-
-    if req.path.match(/cart/)
-      @@cart.each do |cart|
-        resp.write "#{cart}/n"
-      end
-    elsif
-        resp.write "Your cart is empty"
-    end
-    resp.finsih
   end
 
   def handle_search(search_term)
