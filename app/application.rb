@@ -21,6 +21,12 @@ class Application
   end
 
   def cart
+    if req.path.match(/cart/)
+      @@cart.each do |cart|
+        resp.write "#{cart}/n"
+      else
+        resp.write "Your cart is empty"
+    end
   end
 
   def handle_search(search_term)
