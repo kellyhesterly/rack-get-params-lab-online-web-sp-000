@@ -19,9 +19,7 @@ class Application
     end
 
     if @@cart.empty?
-       resp.write "#{search_term} is one of our items"
-     else
-       resp.write "Couldn't find #{search_term}"
+       resp.write "Your cart is empty"
      end
 
     resp.finish
