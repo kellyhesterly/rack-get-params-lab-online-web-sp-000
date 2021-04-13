@@ -32,7 +32,7 @@ class Application
       end
     else resp.write "We don't have that item"
     end
-     end
+  end
 
     resp.finish
   end
