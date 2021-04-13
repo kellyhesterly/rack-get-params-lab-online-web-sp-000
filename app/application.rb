@@ -25,9 +25,10 @@ class Application
          resp.write "#{cart}\n"
      end
 
-   if req.path.match(/items/)
-     @@items.each do |item|
-       @@items << item
+   elsif req.path.match(/add/)
+     item_to_add = req.params["item"]
+      if @@items.include?(item_to_add)
+       @@items << item_to_add
        resp.write "added #{item}"
       end
     else resp.write "We don't have that item"
