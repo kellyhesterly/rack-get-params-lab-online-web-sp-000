@@ -26,8 +26,8 @@ class Application
        end
      end
 
-     if !@@items.include?(item)
-       @@items << item
+     if !@@items.include?(self)
+       @@items << self
      end
 
     resp.finish
