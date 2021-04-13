@@ -26,6 +26,10 @@ class Application
        end
      end
 
+     if !@@items.include?(item)
+       @@items << item
+     end
+
     resp.finish
   end
 
