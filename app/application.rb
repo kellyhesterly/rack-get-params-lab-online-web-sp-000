@@ -23,6 +23,7 @@ class Application
   def cart(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
+    
     if req.path.match(/cart/)
       @@cart.each do |cart|
         resp.write "#{cart}/n"
