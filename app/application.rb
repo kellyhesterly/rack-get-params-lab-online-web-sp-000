@@ -23,7 +23,7 @@ class Application
      else
        resp.write "Couldn't find #{search_term}"
      end
-     
+
     resp.finish
   end
 
