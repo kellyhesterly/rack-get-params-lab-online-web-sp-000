@@ -26,9 +26,10 @@ class Application
        end
      end
 
-     if !@@items.include?(self)
+   if !@@items.include?(?)
+     @@items.each do |item|
        binding.pry
-       @@items << self
+       @@items << item
      end
 
     resp.finish
