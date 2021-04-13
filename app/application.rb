@@ -20,7 +20,9 @@ class Application
     resp.finish
   end
 
-  def cart
+  def cart(env)
+    resp = Rack::Response.new
+    req = Rack::Request.new(env)
     if req.path.match(/cart/)
       @@cart.each do |cart|
         resp.write "#{cart}/n"
@@ -28,6 +30,7 @@ class Application
       else
         resp.write "Your cart is empty"
     end
+    resp.finsih
   end
 
   def handle_search(search_term)
