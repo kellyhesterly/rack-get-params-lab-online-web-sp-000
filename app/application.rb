@@ -26,11 +26,11 @@ class Application
        end
      end
 
-   if !@@items.include?("Figs")
+   if req.path.match(/items/)
      @@items.each do |item|
-       binding.pry
        @@items << item
       end
+    else resp.write "We don't have that item"
      end
 
     resp.finish
