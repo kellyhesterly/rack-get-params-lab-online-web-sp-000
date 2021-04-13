@@ -30,7 +30,7 @@ class Application
      @@items.each do |item|
        binding.pry
        @@items << item
-     end
+      end
      end
 
     resp.finish
