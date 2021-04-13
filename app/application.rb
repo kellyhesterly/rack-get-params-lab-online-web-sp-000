@@ -31,6 +31,7 @@ class Application
        binding.pry
        @@items << item
      end
+     end
 
     resp.finish
   end
